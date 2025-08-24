@@ -10,4 +10,6 @@ public class CategoryResource {
     @Inject
     private CategoryService categoryService;
 
+    //todo: get - getAllCatagories
+    //todo: get - getCatagoryById
 }

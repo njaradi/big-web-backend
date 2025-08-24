@@ -37,6 +37,8 @@ public class UserResource {
         return Response.ok(response).build();
     }
 
+    //todo: pregled svih korisnika - samo za admina
+
     //todo: dodavanje korisnika
     @POST
     @Produces({MediaType.APPLICATION_JSON})
@@ -44,5 +46,5 @@ public class UserResource {
         return this.userService.addUser(user);
     }
     //todo: izmena korisnika
-    //todo: brisanje korisnika korisnika
+    //todo: aktiviraj/deaktiviraj korisnika
 }
