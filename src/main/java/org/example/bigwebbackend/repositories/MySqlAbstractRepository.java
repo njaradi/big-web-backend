@@ -3,7 +3,7 @@ package org.example.bigwebbackend.repositories;
 import java.sql.*;
 import java.util.Optional;
 
-//R00troot*
+//
 public class MySqlAbstractRepository {
     public MySqlAbstractRepository() {
         try {

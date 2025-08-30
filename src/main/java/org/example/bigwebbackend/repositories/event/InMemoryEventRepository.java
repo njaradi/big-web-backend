@@ -5,7 +5,6 @@ import org.example.bigwebbackend.entites.Event;
 import org.example.bigwebbackend.entites.Tag;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
