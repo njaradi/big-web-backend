@@ -17,12 +17,11 @@ public class CategoryResource {
     @Inject
     private CategoryService categoryService;
 
-    //todo: get - getAllCatagories
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Category> getAllCategories() {
-        return Response.ok(this.categoryService.getAllCategories()).build();
-    }
+        return (List<Category>) Response.ok(this.categoryService.getAllCategories()).build();
+    }//todo:what the hell is wrong here
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
