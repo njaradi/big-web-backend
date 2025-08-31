@@ -12,6 +12,7 @@ import org.example.bigwebbackend.repositories.user.UserRepository;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import java.util.Date;
+import java.util.List;
 
 public class UserService {
     @Inject
@@ -62,4 +63,6 @@ public class UserService {
         //todo:addUser() in user service
         return this.userRepository.addUser(user);
     }
+
+    public List<User> getAllUsers() {return this.userRepository.getAllUsers();}
 }

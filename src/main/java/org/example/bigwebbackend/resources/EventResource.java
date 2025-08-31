@@ -24,6 +24,7 @@ public class EventResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
     public Event getEventById(@PathParam("id") int id) {return this.eventService.getEventById(id);}
 
     @POST
@@ -32,28 +33,34 @@ public class EventResource {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
     public Event updateEvent(@PathParam("id") int id, Event event) {return this.eventService.editEvent(event);}
 
     @DELETE
+    @Path("/{id}")
     public void deleteEvent(@PathParam("id") int id) { this.eventService.deleteEvent(id);}
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("/most-viewed")
     public List<Event> get10MostViewedEvents()
     {return this.eventService.get10MostViewedEvents();}
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("/category")
     public List<Event> getEventsByCategory(Category category)
     {return this.eventService.getEventsByCategory(category);}
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("/tag")
     public List<Event> getEventsByTag(Tag tag)
     {return this.eventService.getEventsByTag(tag);}
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("/top-three-liked")
     public List<Event> getTop3LikedEvents()
     {return this.eventService.getTop3LikedEvents();}
 

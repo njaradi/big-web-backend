@@ -4,6 +4,7 @@ import org.example.bigwebbackend.entites.Category;
 import org.example.bigwebbackend.services.CategoryService;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -19,12 +20,12 @@ public class CategoryResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Category> getAllCategories() {
-        return (List<Category>) Response.ok(this.categoryService.getAllCategories()).build();
-    }//todo:what the hell is wrong here
+    public Response getAllCategories() {
+        return Response.ok(this.categoryService.getAllCategories()).build();
+    }
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Category createCategory(Category category) {return categoryService.createCategory(category);}
+    public Category createCategory(@Valid Category category) {return categoryService.createCategory(category);}
 
 }

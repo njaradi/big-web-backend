@@ -46,7 +46,7 @@ public class MySqlCategoryRepository extends MySqlAbstractRepository implements 
         try {
             connection = this.newConnection();
 
-            String[] generatedColumns = {"id"};
+            String[] generatedColumns = {"id_category"};
 
             preparedStatement = connection.prepareStatement("INSERT INTO categories (name, description) VALUES(?, ?)", generatedColumns);
             preparedStatement.setString(1, category.getName());

@@ -11,6 +11,6 @@ public class CategoryService {
     private CategoryRepository categoryRepository;
 
     public List<Category> getAllCategories() {return this.categoryRepository.getAllCategories();}
-    public Category createCategory(Category category) {return categoryRepository.createCategory(category);}
+    public Category createCategory(Category category) {return this.categoryRepository.createCategory(category);}
 
 }

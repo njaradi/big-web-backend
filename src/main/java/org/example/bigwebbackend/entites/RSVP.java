@@ -1,7 +1,12 @@
 package org.example.bigwebbackend.entites;
 
-import java.time.LocalDateTime;
+import lombok.*;
 
+import java.time.LocalDateTime;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class RSVP {
     private Integer userId;
     private Integer eventId;

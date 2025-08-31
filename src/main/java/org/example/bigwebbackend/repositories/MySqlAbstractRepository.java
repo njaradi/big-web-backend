@@ -28,7 +28,7 @@ public class MySqlAbstractRepository {
     }
 
     protected String getDatabaseName() {
-        return "test_schema";
+        return "big_web_datebase";
     }
 
     protected String getUsername() {
@@ -40,11 +40,11 @@ public class MySqlAbstractRepository {
     }
 
     protected void closeStatement(Statement statement) {
-        try {
-            Optional.of(statement).get().close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+            try {
+                Optional.of(statement).get().close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
     }
 
     protected void closeResultSet(ResultSet resultSet) {

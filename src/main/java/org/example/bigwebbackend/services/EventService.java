@@ -6,9 +6,16 @@ import org.example.bigwebbackend.entites.Tag;
 import org.example.bigwebbackend.repositories.event.EventRepository;
 
 import javax.inject.Inject;
+import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventService {
+
+    public EventService() {
+        System.out.println(this);
+    }
+
     @Inject
     private EventRepository eventRepository;
 
