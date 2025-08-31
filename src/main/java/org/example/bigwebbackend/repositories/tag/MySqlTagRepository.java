@@ -48,7 +48,7 @@ public class MySqlTagRepository extends MySqlAbstractRepository implements TagRe
 
             String[] generatedColumns = {"id_tag"};
 
-            preparedStatement = connection.prepareStatement("INSERT INTO categories (name) VALUES(?)", generatedColumns);
+            preparedStatement = connection.prepareStatement("INSERT INTO tags (name) VALUES(?)", generatedColumns);
             preparedStatement.setString(1, tag.getName());
             preparedStatement.executeUpdate();
             resultSet = preparedStatement.getGeneratedKeys();
