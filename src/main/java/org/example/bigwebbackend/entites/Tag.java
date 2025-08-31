@@ -15,5 +15,5 @@ public class Tag {
     @NotNull(message = "tag name is required")
     @NotEmpty(message = "tag name is required")
     private String name;
-    private List<Event> events;
+    //private List<Event> events;
 }

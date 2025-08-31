@@ -1,9 +1,13 @@
 package org.example.bigwebbackend;
 
+import org.example.bigwebbackend.repositories.event.EventRepository;
+import org.example.bigwebbackend.repositories.event.MySqlEventRepository;
+import org.example.bigwebbackend.services.EventService;
 import org.glassfish.jersey.internal.inject.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 
+import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
@@ -18,9 +22,9 @@ public class HelloApplication extends ResourceConfig {
             @Override
             protected void configure() {
                 //todo: kad napravis inMemory ovde sredi ostatak
-                //this.bind(InMemoryPostRepository.class).to(PostRepository.class).in(Singleton.class);
+                this.bind(MySqlEventRepository.class).to(EventRepository.class).in(Singleton.class);
 
-                //this.bindAsContract(PostService.class);
+                this.bindAsContract(EventService.class);
             }
         };
         register(binder);

@@ -4,5 +4,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/bigwebbackend/repositories/category/MySqlCategoryRepository.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/bigwebbackend/repositories/comment/MySqlCommentRepository.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/bigwebbackend/repositories/event/MySqlEventRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/bigwebbackend/repositories/tag/MySqlTagRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/bigwebbackend/repositories/user/MySqlUserRepository.java" dialect="GenericSQL" />
   </component>
 </project>

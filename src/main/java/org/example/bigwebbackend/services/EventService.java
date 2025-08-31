@@ -4,7 +4,6 @@ import org.example.bigwebbackend.entites.Category;
 import org.example.bigwebbackend.entites.Event;
 import org.example.bigwebbackend.entites.Tag;
 import org.example.bigwebbackend.repositories.event.EventRepository;
-import sun.tools.jconsole.Tab;
 
 import javax.inject.Inject;
 import java.util.List;
