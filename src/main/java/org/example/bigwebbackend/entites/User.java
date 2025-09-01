@@ -25,7 +25,7 @@ public class User {
     @NotNull(message = "user surname is required")
     @NotEmpty(message = "user surname is required")
     private String surname;
-    private UserType userType;
-    private Status status;
+    private String userType;
+    private String status;
     private String hashedPassword;//todo: has to be a hash value
 }

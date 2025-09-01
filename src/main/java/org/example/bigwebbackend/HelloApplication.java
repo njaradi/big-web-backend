@@ -43,6 +43,7 @@ public class HelloApplication extends ResourceConfig {
             }
         };
         register(binder);
+        register(org.example.bigwebbackend.filters.Cors.class); // register manually
 
         // Ucitavamo resurse
         packages("org.example.bigwebbackend.resources");

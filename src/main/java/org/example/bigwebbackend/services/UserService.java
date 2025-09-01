@@ -38,7 +38,7 @@ public class UserService {
                 .withIssuedAt(issuedAt)
                 .withExpiresAt(expiresAt)
                 .withSubject(email)
-                .withClaim("role", user.getUserType().ordinal())
+                .withClaim("role", user.getUserType())
                 .sign(algorithm);//idk what this withClaim role is we will see
     }
 

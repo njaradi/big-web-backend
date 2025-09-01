@@ -27,8 +27,8 @@ public class MySqlUserRepository extends MySqlAbstractRepository implements User
                         resultSet.getString("email"),
                         resultSet.getString("name"),
                         resultSet.getString("surname"),
-                        (UserType) resultSet.getObject("user_type"),//todo: this is def not gonna work
-                        (Status) resultSet.getObject("status"),
+                        resultSet.getString("user_type"),//todo: this is def not gonna work
+                        resultSet.getString("status"),
                         resultSet.getString("hashed_password"));
             }
 
@@ -61,8 +61,8 @@ public class MySqlUserRepository extends MySqlAbstractRepository implements User
                         resultSet.getString("email"),
                         resultSet.getString("name"),
                         resultSet.getString("surname"),
-                        (UserType) resultSet.getObject("user_type"),//todo: this is def not gonna work
-                        (Status) resultSet.getObject("status"),
+                        resultSet.getString("user_type"),//todo: this is def not gonna work
+                        resultSet.getString("status"),
                         resultSet.getString("hashed_password"));
             }
 
@@ -92,8 +92,8 @@ public class MySqlUserRepository extends MySqlAbstractRepository implements User
             preparedStatement.setString(2, user.getName());
             preparedStatement.setString(3, user.getSurname());
             preparedStatement.setString(4, user.getHashedPassword());
-            preparedStatement.setObject(5, user.getUserType());
-            preparedStatement.setObject(6, user.getStatus());
+            preparedStatement.setString(5, user.getUserType());
+            preparedStatement.setString(6, user.getStatus());
             preparedStatement.executeUpdate();
             resultSet = preparedStatement.getGeneratedKeys();
 
@@ -130,8 +130,8 @@ public class MySqlUserRepository extends MySqlAbstractRepository implements User
                         resultSet.getString("email"),
                         resultSet.getString("name"),
                         resultSet.getString("surname"),
-                        (UserType) resultSet.getObject("user_type"),//todo: this is def not gonna work
-                        (Status) resultSet.getObject("status"),
+                        resultSet.getString("user_type"),//todo: this is def not gonna work
+                        resultSet.getString("status"),
                         resultSet.getString("hashed_password")));
             }
 
